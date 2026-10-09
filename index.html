@@ -1,14 +1,48 @@
 <div class="container">
-    <h1>إلى أجمل جُمان.. ❤️</h1>
-    <div class="heart">❤️</div>
-    
-    <p>
-        أسف كلش البارحة لأن عفت السهرة وغفيت.. والله العظيم مو بيدي، جنت متحمس للفيلم والكيك اللي تعبتي بيه أكثر من أي شي ثاني، بس التعب غلبني بدون ما أحس.
-    </p>
-    <p>
-        حقج كلش تزعلين وتنقهرين، لأن صدك خربت السهرة علينا. بس حبيت أسوي هذا المكان الصغير الج وحدج، حتى أكول لج من كل قلبي: <span class="highlight">أنا كلش أسف، وميصير يهون عليّ زعلج أبداً.</span>
-    </p>
-    <p style="text-align: center; margin-top: 30px; color: #ff6b81;">
-        أحبج هواي ❤️
-    </p>
+    <!-- خطوة 1: الظرف المغلق -->
+    <div id="envelope-section" onclick="openEnvelope()">
+        <div class="envelope">💌</div>
+        <h2 style="color: #fff; font-size: 20px; margin-bottom: 15px;">هل تقبلين مني هاي الرسالة؟</h2>
+        <button class="open-btn">افتحي الظرف ❤️</button>
+    </div>
+
+    <!-- خطوة 2: محتوى الرسالة والاعتذار -->
+    <div id="message-section">
+        <h1>إلى أجمل جُمان.. ❤️</h1>
+        <p>
+            أسف كلش البارحة لأن عفت السهرة وغفيت.. والله العظيم مو بيدي، جنت متحمس للفيلم والكيك اللي تعبتي بيه أكثر من أي شي ثاني، بس التعب غلبني بدون ما أحس.
+        </p>
+        <p>
+            حقج كلش تزعلين وتنقهرين، لأن صدك خربت السهرة علينا. بس حبيت أسوي هذا المكان الصغير الج وحدج، حتى أكول لج من كل قلبي: <span class="highlight">أنا كلش أسف، وميصير يهون عليّ زعلج أبداً.</span>
+        </p>
+
+        <div class="question-box">
+            <p style="text-align: center; font-weight: bold; color: #fff;">تقبلين اعتذاري وتسامحيني؟</p>
+            <div class="btn-group">
+                <button class="yes-btn" onclick="acceptApology()">إي مسامحتك ❤️</button>
+                <button class="no-btn" id="noBtn" onmouseover="moveButton()" onclick="moveButton()">لا، زعلانة</button>
+            </div>
+            <div id="success-msg">يا بعد قلبي، وهسة انفتح الجو وصار أبيض! أحبج هواي 🥰</div>
+        </div>
+    </div>
 </div>
+
+<script>
+    function openEnvelope() {
+        document.getElementById('envelope-section').style.display = 'none';
+        document.getElementById('message-section').style.display = 'block';
+    }
+
+    function acceptApology() {
+        document.querySelector('.btn-group').style.display = 'none';
+        document.getElementById('success-msg').style.display = 'block';
+    }
+
+    // حركة تونس إذا داسِت زر "لا، زعلانة" يهرب الماوس منها!
+    function moveButton() {
+        const btn = document.getElementById('noBtn');
+        const x = Math.random() * 150 - 75;
+        const y = Math.random() * 100 - 50;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+</script>

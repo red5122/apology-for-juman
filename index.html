@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إلى أجمل جُمان ❤️</title>
+    <title>To My Dearest Juman ❤️</title>
     <style>
         body {
-            background-color: #ffe6eb;
-            background-image: radial-gradient(#ffb6c1 15%, transparent 16%), radial-gradient(#ffb6c1 15%, transparent 16%);
-            background-size: 60px 60px;
-            background-position: 0 0, 30px 30px;
-            color: #4a2e35;
-            font-family: 'Tahoma', sans-serif;
+            background: linear-gradient(135deg, #1e1b4b, #311042, #1e3a8a);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            color: #e2e8f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             padding: 20px;
             margin: 0;
@@ -21,56 +20,65 @@
             height: 100vh;
             overflow: hidden;
         }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
         .container {
-            max-width: 550px;
-            width: 90%;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 35px;
-            border-radius: 25px;
-            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.5);
+            max-width: 650px;
+            width: 95%;
+            background: rgba(30, 27, 75, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
             position: relative;
-            border: 2px solid #ffb6c1;
+            border: 2px solid rgba(168, 85, 247, 0.4);
         }
         #step1 h1 {
-            color: #d63384;
-            font-size: 24px;
+            color: #c084fc;
+            font-size: 28px;
             margin-bottom: 25px;
+            text-shadow: 0 2px 10px rgba(192, 132, 252, 0.3);
         }
         .yes-btn {
-            background-color: #ff4757;
+            background: linear-gradient(135deg, #9333ea, #3b82f6);
             color: white;
             border: none;
-            padding: 14px 30px;
+            padding: 15px 35px;
             font-size: 18px;
-            border-radius: 30px;
+            border-radius: 35px;
             cursor: pointer;
             font-weight: bold;
-            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+            box-shadow: 0 5px 20px rgba(147, 51, 234, 0.4);
             transition: 0.3s;
         }
         .yes-btn:hover {
-            background-color: #ff6b81;
-            transform: scale(1.05);
+            transform: scale(1.08);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
         }
         #step2 {
             display: none;
         }
+        /* ظرف أكبر وأفخم */
         .envelope-container {
             cursor: pointer;
             position: relative;
-            margin: 20px auto;
-            width: 220px;
-            height: 150px;
-            background: #ff4757;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            margin: 30px auto;
+            width: 280px;
+            height: 180px;
+            background: #dc2626;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.4);
             display: flex;
             justify-content: center;
             align-items: center;
             transition: transform 0.3s;
+            border: 2px solid #ef4444;
         }
         .envelope-container:hover {
-            transform: scale(1.03);
+            transform: scale(1.05);
         }
         .envelope-flap {
             position: absolute;
@@ -78,75 +86,101 @@
             left: 0;
             width: 0;
             height: 0;
-            border-left: 110px solid transparent;
-            border-right: 110px solid transparent;
-            border-top: 85px solid #e84118;
+            border-left: 140px solid transparent;
+            border-right: 140px solid transparent;
+            border-top: 100px solid #b91c1c;
             transform-origin: top;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s ease;
         }
         .envelope-text {
             color: white;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 18px;
             z-index: 2;
-            margin-top: 30px;
+            margin-top: 40px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
         }
+        /* رسالة طويلة ومؤثرة */
         #step3 {
             display: none;
-            text-align: right;
+            text-align: left;
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 10px;
             animation: slideUp 1s ease forwards;
         }
+        #step3::-webkit-scrollbar {
+            width: 5px;
+        }
+        #step3::-webkit-scrollbar-thumb {
+            background: #9333ea;
+            border-radius: 10px;
+        }
         @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
+            from { opacity: 0; transform: translateY(40px); }
             to { opacity: 1; transform: translateY(0); }
         }
         h2 {
-            color: #d63384;
-            font-size: 22px;
+            color: #c084fc;
+            font-size: 24px;
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         p {
-            font-size: 16px;
-            line-height: 1.9;
-            color: #555;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #cbd5e1;
             margin-bottom: 15px;
         }
         .highlight {
-            color: #d63384;
+            color: #f472b6;
             font-weight: bold;
+        }
+        /* تأثير الورود المتطايرة */
+        .flower {
+            position: absolute;
+            font-size: 24px;
+            animation: fall linear forwards;
+            z-index: 100;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(500px) rotate(360deg); opacity: 0; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="container" id="mainContainer">
         <!-- الخطوة 1 -->
         <div id="step1">
-            <h1>🌸 تقبلين رسالتي؟ 🌸</h1>
-            <button class="yes-btn" onclick="goToEnvelope()">نعم أقبل ❤️</button>
+            <h1>💜 Will you accept my message? 💙</h1>
+            <button class="yes-btn" onclick="goToEnvelope()">Yes, I will ❤️</button>
         </div>
 
-        <!-- الخطوة 2 -->
+        <!-- الخطوة 2: ظرف كبير -->
         <div id="step2">
-            <h2 style="color: #d63384; font-size: 20px; margin-bottom: 15px;">🌹 اضغطي على الظرف لفتح الرسالة 🌹</h2>
+            <h2 style="color: #c084fc; font-size: 22px; margin-bottom: 20px;">🌹 Tap the envelope to open your letter 🌹</h2>
             <div class="envelope-container" onclick="openMessage()">
                 <div class="envelope-flap" id="flap"></div>
-                <div class="envelope-text">✉️ افتحي الظرف</div>
+                <div class="envelope-text">💌 Open Me</div>
             </div>
         </div>
 
-        <!-- الخطوة 3 -->
+        <!-- الخطوة 3: الرسالة الإنجليزية المؤثرة والطويلة -->
         <div id="step3">
-            <h2>إلى أجمل جُمان.. ❤️</h2>
+            <h2>To My Dearest Juman... ❤️</h2>
             <p>
-                أسف كلش البارحة لأن عفت السهرة وغفيت.. والله العظيم مو بيدي، جنت متحمس للفيلم والكيك اللي تعبتي بيه أكثر من أي شي ثاني، بس التعب غلبني بدون ما أحس.
+                First of all, I am so deeply and truly sorry for falling asleep last night. I know how much effort you put into preparing everything—especially the cake you made so specially for our movie night. You were excited, and you deserved my full attention and presence, not my absence.
             </p>
             <p>
-                حقج كلش تزعلين وتنقهرين، لأن صدك خربت السهرة علينا. بس حبيت أسوي هذا المكان الصغير الج وحدج، حتى أكول لج من كل قلبي: <span class="highlight">أنا كلش أسف، وميصير يهون عليّ زعلج أبداً.</span>
+                I hate knowing that I ruined what was supposed to be a special moment for us. Honestly, exhaustion completely took over me before I even realized it, and missing out on that time with you breaks my heart. 
             </p>
-            <p style="text-align: center; margin-top: 20px; color: #d63384; font-weight: bold;">
-                أحبج هواي ❤️
+            <p>
+                I wanted to build this little world just for you, to show you how much you truly mean to me. <span class="highlight">Your feelings matter so much to me, and it hurts me to see you upset.</span> Please forgive me for letting you down this time. I promise to make it up to you, and I will never let sleep ruin our moments again.
+            </p>
+            <p style="text-align: center; margin-top: 25px; color: #c084fc; font-size: 18px; font-weight: bold;">
+                I love you more than words can say. ✨💖
             </p>
         </div>
     </div>
@@ -158,11 +192,33 @@
         }
 
         function openMessage() {
+            // فتح الظرف
             document.getElementById('flap').style.transform = 'rotateX(180deg)';
+            
+            // إطلاق ورود مكثفة ومتطايرة
+            for(let i = 0; i < 35; i++) {
+                createFlower();
+            }
+
             setTimeout(() => {
                 document.getElementById('step2').style.display = 'none';
                 document.getElementById('step3').style.display = 'block';
-            }, 500);
+            }, 600);
+        }
+
+        function createFlower() {
+            const flower = document.createElement('div');
+            flower.classList.add('flower');
+            const flowersList = ['🌸', '🌹', '💐', '🌷', '✨', '💖'];
+            flower.innerHTML = flowersList[Math.floor(Math.random() * flowersList.length)];
+            flower.style.left = Math.random() * window.innerWidth + 'px';
+            flower.style.top = '-20px';
+            flower.style.animationDuration = (Math.random() * 2 + 1.5) + 's';
+            document.body.appendChild(flower);
+
+            setTimeout(() => {
+                flower.remove();
+            }, 3000);
         }
     </script>
 
